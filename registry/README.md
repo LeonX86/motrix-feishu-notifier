@@ -14,13 +14,15 @@ After the first GitHub Release exists:
    `updatedAt` for every new release.
 5. Open a PR.
 
-The current draft matches:
+The current release asset matches:
 
 ```text
-dist/leonx86.feishu-notifier-0.5.0.moext
-sha256 b81bc5eebb8694a9e2aa37e44b1dd5104f15ca4ed73a109c75e2759747b5b497
-size   6870
+leonx86.feishu-notifier-0.5.0.moext
+sha256 242598a4792e52a89b8aae83d15745a5db6cce06437ec5e304ea66908df8f913
+size   6865
 ```
 
-If you change `motrix-plugin.json` or `src/index.ts` and rebuild, recompute
-the hash and size before submitting the registry PR.
+Use the hash and size of the GitHub Release asset. A local Windows build may
+differ slightly because of line endings. If you change `motrix-plugin.json` or
+`src/index.ts` and publish a new release, update the hash and size before
+submitting the registry PR.
