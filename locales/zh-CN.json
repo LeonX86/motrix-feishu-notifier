@@ -1,0 +1,10 @@
+{
+  "name": "飞书下载通知",
+  "description": "下载完成后通过飞书群自定义机器人发送通知。",
+  "settings.title": "飞书通知",
+  "settings.description": "配置飞书群自定义机器人的 Webhook。",
+  "settings.larkKey.title": "飞书机器人 larkKey",
+  "settings.larkKey.description": "填写 Webhook 完整地址，或 .../hook/ 后面的 key。Motrix 的「重置」会回填密文，清空请手动删除。",
+  "settings.utcOffset.title": "时区偏移（小时）",
+  "settings.utcOffset.description": "默认 8（中国标准时间）；UTC 填 0。"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "motrix-feishu-notifier",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "description": "Motrix plugin that sends Feishu/Lark group bot notifications when a download completes.",
+  "license": "MIT",
+  "homepage": "https://github.com/LeonX86/motrix-feishu-notifier",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeonX86/motrix-feishu-notifier.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node esbuild.config.mjs",
+    "typecheck": "tsc --noEmit",
+    "validate": "motrix-plugin validate && motrix-plugin validate-host-permissions",
+    "pack": "motrix-plugin pack",
+    "lint": "motrix-plugin lint",
+    "check": "npm run typecheck && npm run validate && npm run pack && npm run lint",
+    "dev": "motrix-plugin dev",
+    "version:check": "node scripts/check-version.mjs"
+  },
+  "devDependencies": {
+    "@motrix/plugin-api": "^2.2.0",
+    "@motrix/plugin-cli": "^2.2.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  }
+}

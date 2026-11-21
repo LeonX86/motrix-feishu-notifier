@@ -1,0 +1,10 @@
+{
+  "name": "Feishu Download Notifier",
+  "description": "Send a Feishu/Lark group bot message when a Motrix download completes.",
+  "settings.title": "Feishu notification",
+  "settings.description": "Configure a Feishu group custom bot webhook.",
+  "settings.larkKey.title": "Feishu bot larkKey",
+  "settings.larkKey.description": "Paste the full webhook URL, or the key after .../hook/. Motrix's Reset button may fill encrypted text; clear the field manually.",
+  "settings.utcOffset.title": "UTC offset (hours)",
+  "settings.utcOffset.description": "Default 8 (China Standard Time); use 0 for UTC."
+}

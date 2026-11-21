@@ -1,0 +1,67 @@
+{
+  "$schema": "https://motrix.app/schemas/plugin/v1.json",
+  "manifestVersion": 1,
+  "id": "leonx86.feishu-notifier",
+  "name": "%name%",
+  "version": "0.5.0",
+  "description": "%description%",
+  "author": "LeonX86",
+  "homepage": "https://github.com/LeonX86/motrix-feishu-notifier",
+  "repository": "https://github.com/LeonX86/motrix-feishu-notifier",
+  "license": "MIT",
+  "icon": "icon.png",
+  "keywords": ["feishu", "lark", "notification", "webhook"],
+  "categories": ["post-action"],
+  "engines": {
+    "motrix": ">=2.4.0 <3.0.0"
+  },
+  "main": "dist/plugin.js",
+  "permissions": ["http"],
+  "hostPermissions": [
+    "https://open.feishu.cn/*",
+    "https://open.larksuite.com/*"
+  ],
+  "activationEvents": [
+    "onStartup",
+    "onTaskType:http",
+    "onTaskType:ftp",
+    "onTaskType:bt",
+    "onTaskType:magnet",
+    "onTaskType:metalink"
+  ],
+  "contributes": {
+    "hooks": {
+      "afterComplete": {
+        "role": "post-process"
+      }
+    },
+    "configuration": {
+      "title": "%settings.title%",
+      "description": "%settings.description%",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "larkKey": {
+            "type": "string",
+            "title": "%settings.larkKey.title%",
+            "description": "%settings.larkKey.description%",
+            "minLength": 1,
+            "maxLength": 512,
+            "secret": true
+          },
+          "utcOffset": {
+            "type": "integer",
+            "title": "%settings.utcOffset.title%",
+            "description": "%settings.utcOffset.description%",
+            "minimum": -12,
+            "maximum": 14,
+            "default": 8
+          }
+        },
+        "required": ["larkKey"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "l10n": "locales"
+}
