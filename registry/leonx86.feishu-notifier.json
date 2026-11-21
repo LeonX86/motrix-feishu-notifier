@@ -2,17 +2,18 @@
   "id": "leonx86.feishu-notifier",
   "version": "0.5.0",
   "origin": "community",
-  "categories": ["post-action"],
-  "permissions": ["http"],
+  "categories": [
+    "post-action"
+  ],
+  "permissions": [
+    "http"
+  ],
   "optionalPermissions": [],
   "hostPermissions": [
     "https://open.feishu.cn/*",
     "https://open.larksuite.com/*"
   ],
   "repository": "https://github.com/LeonX86/motrix-feishu-notifier",
-  "homepage": "https://github.com/LeonX86/motrix-feishu-notifier",
-  "icon": "https://dl.motrix.app/registry/assets/leonx86.feishu-notifier/icon.png",
-  "screenshots": [],
   "updatedAt": "2026-11-22",
   "featured": false,
   "listing": {
